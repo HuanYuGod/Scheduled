@@ -18,6 +18,10 @@ jobs:
         run: |
           git config --local user.email "xuhaoyuan2006@outlook.com"
           git config --local user.name "HuanYuGod"
+          git config --local --unset credential.helper
+          git config --global --unset credential.helper
+          git config --system --unset credential.helper
+          git config --global credential.helper store
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "又是元气满满的一天，啊~~~~~~"
