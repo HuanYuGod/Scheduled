@@ -16,6 +16,7 @@ jobs:
 
       - name: Auto green
         run: |
+          git clone git@github.com:HuanYuGod/Scheduled.git
           git config --local user.email "xuhaoyuan2006@outlook.com"
           git config --local user.name "HuanYuGod"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
