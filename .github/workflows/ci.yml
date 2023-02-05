@@ -16,8 +16,10 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "kevinclair@apache.org"
-          git config --local user.name "KevinClair"
+          git config --local user.email "xuhaoyuan2006@outlook.com"
+          git config --local user.name "HuanYuGod"
+          git config --global --unset http.proxy
+          git config --global --unset https.proxy
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "又是元气满满的一天，啊~~~~~~"
